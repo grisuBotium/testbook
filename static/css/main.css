@@ -4,7 +4,7 @@ body
 	padding: 0;
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background:white url(../images/bg_header.png) repeat-x left top;
+	background:white url(../img/bg_header.png) repeat-x left top;
 }
 
 body a
@@ -108,7 +108,7 @@ body a
 
 #watchlist{
 	margin-top:30px;
-        background:#d94b4e url(../images/watch.png) no-repeat 3px center;
+        background:#d94b4e url(../img/watch.png) no-repeat 3px center;
         height:32px;
 	width:80px;
 	border:none;
@@ -133,7 +133,7 @@ body a
 }
 #openbug{
 	margin-top:30px;
-        background:#D5FFFA url(../images/plus.png) no-repeat 3px center;
+        background:#D5FFFA url(../img/plus.png) no-repeat 3px center;
         height:32px;
 	width:120px;
 	cursor:pointer;
