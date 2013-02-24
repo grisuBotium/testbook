@@ -10,12 +10,30 @@
 
 {% block content %}
 
-    <h1>testbook</h1>
+    <h1>testbookd</h1>
     <p>finally found a working development server for python / django / sqlite3</p>
     <p>time (server): {{ right_now.hour }}:{{ right_now.minute }}:{{ right_now.second }}</p>
     <p>happy coding :-)</p>
 
+    <div class="container" id="page">
+        <div id="header">
+            <div id="title">testbook</div>
+
+            <div id="topmenu">
+                home about test
+            </div>
+        </div>
+        <!-- login button -->
+        <div class="loginbtn">
+            <a href="#" class="loginbutton right">login</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="footer">
+        Copyright &copy; 2013 by TestPlus KG.<br/>
+        All Rights Reserved.<br/>
+    </div>
+
 {% endblock %}
-
-
-
