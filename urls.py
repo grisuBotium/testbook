@@ -7,13 +7,14 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # This is going to be our home view.
     # We'll uncomment it later
-    url(r'^$', 'testbook.myapp.views.home', name='home'),
+    url(r'^$', include('home.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
 )
 
 # Uncomment these two lines to enable your static files on PythonAnywhere

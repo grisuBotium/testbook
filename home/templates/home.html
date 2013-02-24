@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block additional_headers %}
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/homepage.js"></script>#}
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/colleagues.js"></script>#}
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/teams.js"></script>#}
+{#    <link rel="stylesheet/less" href="{{ STATIC_URL }}less/challenges.less" type="text/css" />#}
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>testbook</h1>
+    <p>finally found a working development server for python / django / sqlite3</p>
+    <p>time (server): {{ right_now.hour }}:{{ right_now.minute }}:{{ right_now.second }}</p>
+    <p>happy coding :-)</p>
+
+{% endblock %}
+
+
+

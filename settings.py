@@ -12,8 +12,8 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        #'NAME': '/home/testbook/testbook/db.sqlite',  # Or path to database file if using sqlite3.
-        'NAME': '/home/grisu/Projects/testbook/db.sqlite',  # Or path to database file if using sqlite3.
+        'NAME': '/home/testbook/testbook/db.sqlite',  # Or path to database file if using sqlite3.
+        #'NAME': '/home/grisu/Projects/testbook/db.sqlite',  # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -46,8 +46,8 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-#MEDIA_ROOT = '/home/testbook/testbook/media'
-MEDIA_ROOT = '/home/grisu/Projects/testbook/media'
+MEDIA_ROOT = '/home/testbook/testbook/media'
+#MEDIA_ROOT = '/home/grisu/Projects/testbook/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -58,8 +58,8 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-#STATIC_ROOT = '/home/testbook/testbook/static'
-STATIC_ROOT = '/home/grisu/Projects/testbook/static'
+STATIC_ROOT = '/home/testbook/testbook/static'
+#STATIC_ROOT = '/home/grisu/Projects/testbook/static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -122,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'testbook.myapp',
+    'testbook.home',
     )
 
 # A sample logging configuration. The only tangible logging
@@ -147,3 +147,9 @@ LOGGING = {
             },
         }
 }
+
+# load local (host dependent settings)
+try:
+    from local_settings import *
+except Exception, e:
+    print "Local Settings Import failed. Is settings_local present? %s" % e
