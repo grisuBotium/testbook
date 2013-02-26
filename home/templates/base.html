@@ -20,6 +20,7 @@
 
         <!-- jQuery -->
         <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/login.js"></script>
 
         <title>testbook</title>
     </head>
@@ -55,6 +56,20 @@
             <div id="footer">
                 Copyright &copy; 2013 by TestPlus KG.<br/>
                 All Rights Reserved.<br/>
+            </div>
+
+            <!-- hidden login form -->
+            <div class="loginform">
+                <form id="login-form" action="/tbook/index.php?r=site/login" method="post">
+                    <div class="row">
+                        <b>username</b>                <input name="LoginForm[username]" id="LoginForm_username" type="text" />                        </div>
+
+                    <div class="row">
+                        <b>password</b>                <input name="LoginForm[password]" id="LoginForm_password" type="password" />                        </div>
+
+                    <div class="row buttons">
+                        <input type="submit" name="yt0" value="login" />        </div>
+                </form>
             </div>
         </div>
 
