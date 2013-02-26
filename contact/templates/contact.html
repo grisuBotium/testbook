@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block additional_headers %}
+{% endblock %}
+
+{% block content %}
+
+    <h1>contact us</h1>
+
+    <p>
+        if you have business inquiries or other questions, please fill out the following form to contact us. thank you.
+    </p>
+
+    <div class="form">
+
+        <form id="contact-form" action="/tbook/index.php?r=site/contact" method="post">
+            <p class="note">fields with <span class="required">*</span> are required.</p>
+
+            <div id="contact-form_es_" class="errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+                <ul><li>dummy</li></ul></div>
+            <div class="row">
+                <label for="ContactForm_name" class="required">Name <span class="required">*</span></label>		<input name="ContactForm[name]" id="ContactForm_name" type="text" />		<div class="errorMessage" id="ContactForm_name_em_" style="display:none"></div>	</div>
+
+            <div class="row">
+                <label for="ContactForm_email" class="required">Email <span class="required">*</span></label>		<input name="ContactForm[email]" id="ContactForm_email" type="text" />		<div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>	</div>
+
+            <div class="row">
+                <label for="ContactForm_subject" class="required">Subject <span class="required">*</span></label>		<input size="60" maxlength="128" name="ContactForm[subject]" id="ContactForm_subject" type="text" />		<div class="errorMessage" id="ContactForm_subject_em_" style="display:none"></div>	</div>
+
+            <div class="row">
+                <label for="ContactForm_body" class="required">Body <span class="required">*</span></label>		<textarea rows="6" cols="50" name="ContactForm[body]" id="ContactForm_body"></textarea>		<div class="errorMessage" id="ContactForm_body_em_" style="display:none"></div>	</div>
+
+            <div class="row">
+                <label for="ContactForm_verifyCode">Verification Code</label>		<div>
+                <img id="yw0" src="http://www.testplus.at/tbook/index.php?r=site/captcha&amp;v=512d087981331" alt="" />		<input name="ContactForm[verifyCode]" id="ContactForm_verifyCode" type="text" />		</div>
+                <div class="hint">please enter the letters as they are shown in the image above.
+                    <br/>letters are not case-sensitive.</div>
+                <div class="errorMessage" id="ContactForm_verifyCode_em_" style="display:none"></div>	</div>
+
+            <div class="row buttons">
+                <input type="submit" name="yt0" value="Submit" />	</div>
+
+        </form>
+    </div><!-- form -->
+
+{% endblock %}

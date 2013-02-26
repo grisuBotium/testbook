@@ -26,12 +26,37 @@
 
     <body>
 
-        {% block navigation %}
-            {% include "menu.html" %}
-        {% endblock %}
+        <div class="container" id="page">
+            <div id="header">
+                <div id="title">testbook</div>
 
-        {% block content %}
-        {% endblock %}
+                {% block navigation %}
+                    {% include "menu.html" %}
+                {% endblock %}
+
+            </div>
+
+            <!-- login button -->
+            <div class="loginbtn">
+                <a href="#" class="loginbutton right">login</a>
+            </div>
+
+            <div id="streamguest">
+                <div id="content">
+
+                    {% block content %}
+                    {% endblock %}
+
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="footer">
+                Copyright &copy; 2013 by TestPlus KG.<br/>
+                All Rights Reserved.<br/>
+            </div>
+        </div>
 
     </body>
 

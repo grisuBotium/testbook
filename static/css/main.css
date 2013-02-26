@@ -22,24 +22,24 @@ body a
 {
 	margin: 0;
 	padding: 0;
-        height: 150px;
-        /* background: url(logo.png) no-repeat 0px 16px; */
+    height: 150px;
+    /* background: url(logo.png) no-repeat 0px 16px; */
 }
 
 #title
 {
 	padding-top: 30px;
 	font-size: 300%;
-        color: #FFFFFF;
-        font-weight: bold;
-        width: 150px;
-        float: left;
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 150px;
+    float: left;
 }
 
 #topmenu
 {
 	padding-top: 45px;
-        float: right;
+    float: right;
 }
 
 #topmenu ul

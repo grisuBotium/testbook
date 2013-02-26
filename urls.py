@@ -8,12 +8,16 @@ urlpatterns = patterns('',
     # This is going to be our home view.
     # We'll uncomment it later
     url(r'^$', include('testbook.home.urls')),
+    url(r'^home/$', include('testbook.home.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^about/$', include('testbook.about.urls')),
+    url(r'^contact/$', include('testbook.contact.urls')),
 
 )
 
