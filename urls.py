@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # We'll uncomment it later
     url(r'^$', include('testbook.home.urls')),
     url(r'^home/$', include('testbook.home.urls')),
+    url(r'^login/$', 'testbook.login.views.login_view', name='login'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -18,6 +19,7 @@ urlpatterns = patterns('',
 
     url(r'^about/$', include('testbook.about.urls')),
     url(r'^contact/$', include('testbook.contact.urls')),
+    url(r'^stream/$', include('testbook.stream.urls'))
 
 )
 

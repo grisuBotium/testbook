@@ -123,6 +123,10 @@ INSTALLED_APPS = (
     'testbook.home',
     'testbook.about',
     'testbook.contact',
+    'testbook.customuser',
+    'testbook.custommiddleware',
+    'testbook.login',
+    'testbook.stream',
     )
 
 # A sample logging configuration. The only tangible logging
@@ -153,3 +157,20 @@ try:
     from local_settings import *
 except Exception, e:
     print "Local Settings Import failed. Is settings_local present? %s" % e
+
+
+LOGIN_REQUIRED_URLS_EXCEPTIONS = (
+    r'/admin(.*)$',
+    r'/login(.*)$',
+    r'/logout(.*)$',
+    r'/home(.*)$',
+    )
+
+COURSE_PERMISSION_URLS_EXCEPTIONS = (
+    r'/admin(.*)$',
+    r'/login(.*)$',
+    r'/logout(.*)$',
+    r'/home(.*)$',
+    r'/about(.*)$',
+    r'/$',
+    )
