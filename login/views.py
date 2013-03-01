@@ -2,7 +2,7 @@ __author__ = 'bruno'
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from login.forms import LoginForm
+from testbook.login.forms import LoginForm
 from testbook.customuser.models import CustomUser
 from django.contrib.auth import *
 from django.http import HttpResponseRedirect
