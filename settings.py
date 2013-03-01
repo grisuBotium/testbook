@@ -99,6 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'testbook.custommiddleware.middleware.RequireLoginMiddleware',
     )
 
 ROOT_URLCONF = 'testbook.urls'
@@ -127,6 +128,7 @@ INSTALLED_APPS = (
     'testbook.custommiddleware',
     'testbook.login',
     'testbook.stream',
+    'testbook.project',
     )
 
 # A sample logging configuration. The only tangible logging
@@ -164,13 +166,7 @@ LOGIN_REQUIRED_URLS_EXCEPTIONS = (
     r'/login(.*)$',
     r'/logout(.*)$',
     r'/home(.*)$',
-    )
-
-COURSE_PERMISSION_URLS_EXCEPTIONS = (
-    r'/admin(.*)$',
-    r'/login(.*)$',
-    r'/logout(.*)$',
-    r'/home(.*)$',
+    r'/contact(.*)$',
     r'/about(.*)$',
     r'/$',
     )

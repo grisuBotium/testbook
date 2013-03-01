@@ -10,7 +10,6 @@ import re
 class RequireLoginMiddleware(object):
     def __init__(self):
         self.exceptions = tuple([re.compile(url) for url in settings.LOGIN_REQUIRED_URLS_EXCEPTIONS])
-        self.require_login_path = getattr(settings, 'LOGIN_URL', '/login/$')
 
     def process_request(self, request):
         if request.user.is_authenticated(): return None
@@ -20,4 +19,4 @@ class RequireLoginMiddleware(object):
                 return None
 
         if request.user.is_anonymous():
-            return HttpResponseRedirect('%s?next=%s' % (self.require_login_path, request.path))
+            return HttpResponseRedirect('/login')
