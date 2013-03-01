@@ -3,7 +3,7 @@ __author__ = 'grisu'
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from customuser.models import CustomUser
+from testbook.customuser.models import CustomUser
 
 import re
 
