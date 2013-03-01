@@ -169,4 +169,5 @@ LOGIN_REQUIRED_URLS_EXCEPTIONS = (
     r'/contact(.*)$',
     r'/about(.*)$',
     r'/$',
+    r'/static(.*)$',
     )
